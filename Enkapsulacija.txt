@@ -1,0 +1,42 @@
+Enkapsulacija se odnosi na skrivanje unutrašnjih podataka objekta i ograničavanje pristupa tim podacima. Cilj enkapsulacije je sakriti implementaciju objekta od vanjskog svijeta, dok omogućuje pristup objektu putem definiranih sučelja (metoda i svojstava). 
+
+Principi enkapsulacije uključuju:
+
+Sakrivanje detalja: Unutrašnji detalji objekta, kao što su varijable članice, mogu biti privatni, a pristup njima se kontrolira pomoću javnih metoda (getters) i metoda za postavljanje (setters).
+Pravila pristupa: Pristup privatnim članicama objekta ograničen je samo na metode unutar samog objekta, čime se kontrolira i osigurava ispravna manipulacija podacima
+
+
+primjer
+
+public class Osoba {
+    private String ime;
+    private int godine;
+
+    početnih vrijednosti
+    public Osoba(String ime, int godine) {
+        this.ime = ime;
+        this.godine = godine;
+    }
+
+     privatnim varijablama
+    public String getIme() {
+        return ime;
+    }
+
+    public int getGodine() {
+        return godine;
+    }
+
+ privatnih varijabli
+    public void setIme(String novoIme) {
+        this.ime = novoIme;
+    }
+
+    public void setGodine(int noveGodine) {
+        if (noveGodine >= 0) {
+            this.godine = noveGodine;
+        } else {
+            System.out.println("Neispravna vrijednost za godine.");
+        }
+    }
+}
